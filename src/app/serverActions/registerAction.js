@@ -9,6 +9,7 @@ export async function registerAction(userRegisteredData){
     await DBConnection()
     console.log("register details:" , userRegisteredData)
 
+    
     try{
         await UserModel.create({
             username:userRegisteredData.username,
