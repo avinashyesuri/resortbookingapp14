@@ -1,26 +1,35 @@
 "use client";
 
 import React, { useState } from "react";
-import { registerAction } from "../serverActions/registerAction";
+import { loginAction } from "../serverActions/loginAction";
+import { useRouter } from "next/router";
 
-const RegisterForm = () => {
-  const [username, setUsername] = useState("");
+const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error,setError] = useState("")
 
-  const registerHandler = async (e) => {
+  const router =useRouter()
+
+
+  const loginHandler = async (e) => {
     e.preventDefault();
 
-    const userRegisteredData = { username, email, password}
-    console.log(userRegisteredData);
-    //register action file cretion 
+    const userLoginData = {email, password}
+    console.log(userLoginData);
     try{
-        const response= await registerAction(userRegisteredData)
+        const response= await loginAction(userLoginData)
         if(response.success){
-        alert("registration sucessful")
+        alert("Login  sucessful")
+        router.push('/')
+        }
+        else{
+            setError(response.message || "Login failed");
         }
     }catch(error){
         console.log("error")
+            setError("Something went wrong. Please try again.");
+
     }
 
   };
@@ -28,19 +37,11 @@ const RegisterForm = () => {
   return (
     <div className="formContainer">
       <div className="formSection">
-        <h1>Register</h1>
+        <h1>Login </h1>
 
-        <form onSubmit={registerHandler}>
-          <h3>Username</h3>
-          <input
-            type="text"
-            name="username"
-            placeholder="Enter username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-
+        <form onSubmit={loginHandler}>
+      
+        {error && <p style={{color:'red'}}>{error}</p>}
           <h3>Email</h3>
           <input
             type="email"
@@ -61,15 +62,15 @@ const RegisterForm = () => {
             required
           />
 
-          <button type="submit">Register</button>
+          <button type="submit">Login</button>
         </form>
 
-        <a href="/login" className="authLink">
-          Already have an account? Login
+        <a href="/register" className="authLink">
+          Dont have an account? Register
         </a>
       </div>
     </div>
   );
 };
 
-export default RegisterForm;
+export default LoginForm;

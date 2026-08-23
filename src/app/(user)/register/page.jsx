@@ -3,7 +3,7 @@ import React from 'react'
 
 const userRegister = () => {
   return (
-    <div>userRegister
+    <div>
     
     <h1>UserRegister</h1>
     <RegisterForm/>
