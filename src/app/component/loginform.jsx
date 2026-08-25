@@ -37,7 +37,7 @@ const LoginForm = () => {
   return (
     <div className="formContainer">
       <div className="formSection">
-        <h1>Login </h1>
+        <h1>Login form </h1>
 
         <form onSubmit={loginHandler}>
       
