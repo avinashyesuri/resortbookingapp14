@@ -4,9 +4,7 @@ import React from 'react'
 const userRegister = () => {
   return (
     <div>
-    
-    <h1>UserRegister</h1>
-    <RegisterForm/>
+        <RegisterForm/>
     </div>
   )
 }

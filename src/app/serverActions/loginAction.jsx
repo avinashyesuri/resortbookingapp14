@@ -14,7 +14,7 @@ export async function loginAction(userLoginData){
     try{
         const response = await signIn("credentials",{
             email:userLoginData.email,
-            password:userLoginData.passwrod,
+            password:userLoginData.password,
             redirect:false
         })
          return  {success:true, mesaaage:"user registerd success"}
