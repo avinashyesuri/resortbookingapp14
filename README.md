@@ -2,9 +2,30 @@
 Next.js — Resort Booking Application  Developing a resort booking application using Next.js, focused on creating a seamless user experience for discovering resorts, exploring rooms and amenities, checking availability, and making bookings. Working with reusable React components, dynamic routing, API integration, responsive UI.
 
 
+FOR RBANCHES DISSOLVING :
+cd C:\Users\Avinash\Desktop\NXTJS\ResortApp\resortbookingapp14
+
+git fetch origin
+
+git switch --track origin/personal-nextauth
+
+git pull origin personal-nextauth
+
+git merge origin/main
+
+git push origin personal-nextauth
 
 
-NEXT RESORT PROJECT MAKING 
+ROUTES:
+AUTH
+PRODUCTS
+USERS
+INDIVIDUAL USER ROUTE
+INDIVIDUAL PRODUCT ROUTE
+
+
+
+NEXT RESORT PROJECT MAKING :
 
 PAGES USER REGISTRATION
 MONGODB CONNECTION 

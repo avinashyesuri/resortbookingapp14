@@ -30,6 +30,7 @@
 // export default AdminPage
 
 
+import AddProductForm from '@/app/component/AddProductForm'
 import AdminNavbar from '@/app/component/AdminNavbar'
 import React from 'react'
 
@@ -41,6 +42,7 @@ const AdminPage = () => {
     <div>
 
       <AdminNavbar />
+      <AddProductForm/>
     </div>
   )
 }
