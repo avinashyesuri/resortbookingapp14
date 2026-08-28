@@ -12,11 +12,11 @@ const AddProductForm = () => {
     const [desc, setDesc] = useState("");
     const [image, setImage] = useState("")
 
-    // const recordHandler = async(e)=>{
-    //     e.preventDefault()
+    const recordHandler = async(e)=>{
+        e.preventDefault()
 
-    //     const recordDetails = {title, price, offer, amen, desc, image}
-    //     console.log(recordDetails)
+        const recordDetails = {title, price, offer, amen, desc, image}
+        console.log(recordDetails)
 
     //       const data = new FormData()
     //       data.append('title', title);
@@ -46,7 +46,7 @@ const AddProductForm = () => {
     //       }
 
 
-    // }
+    }
 
   return (
     <div className={admin.container}>
