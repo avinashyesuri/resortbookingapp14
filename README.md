@@ -14,7 +14,9 @@ git pull origin personal-nextauth
 git merge origin/main
 
 git push origin personal-nextauth
-
+git add .
+git commit -m "your message"
+git push origin personal-nextauth
 
 ROUTES:
 AUTH
