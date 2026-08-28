@@ -19,6 +19,6 @@ export async function loginAction(userLoginData){
         })
          return  {success:true, mesaaage:"user registerd success"}
     }catch(error){
-
+ console.log("error")
     }
     }

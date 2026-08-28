@@ -29,7 +29,8 @@
 
 // export default AdminPage
 
-import { auth } from '@/app/auth'
+
+import AdminNavbar from '@/app/component/AdminNavbar'
 import React from 'react'
 
 
@@ -37,7 +38,10 @@ import React from 'react'
 const AdminPage = () => {
 
   return (
-    <div>AdminPage</div>
+    <div>
+
+      <AdminNavbar />
+    </div>
   )
 }
 
