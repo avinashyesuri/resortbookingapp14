@@ -1,22 +1,50 @@
 # Resort_booking_application
 Next.js — Resort Booking Application  Developing a resort booking application using Next.js, focused on creating a seamless user experience for discovering resorts, exploring rooms and amenities, checking availability, and making bookings. Working with reusable React components, dynamic routing, API integration, responsive UI.
 
+GIT_COMMANDS
+git clone https://github.com/USERNAME/REPO.git
+git mv oldfile.jsx newfile.jsx
+cd REPO
+git status
 
-FOR RBANCHES DISSOLVING :
-cd C:\Users\Avinash\Desktop\NXTJS\ResortApp\resortbookingapp14
-
-git fetch origin
-
-git switch --track origin/personal-nextauth
-
-git pull origin personal-nextauth
-
-git merge origin/main
-
-git push origin personal-nextauth
+git checkout main
+git pull
+git checkout -b MY_BRANCH
+git status
 git add .
-git commit -m "your message"
-git push origin personal-nextauth
+git commit -m "Add user registration"
+git push -u origin OFFICE_WORK
+
+git checkout main
+git pull
+git checkout -b PERSONAL_WORK
+git push -u origin PERSONAL_WORK
+
+
+
+CLONE
+  ↓
+CD
+  ↓
+STATUS
+  ↓
+CHECKOUT / CREATE BRANCH
+  ↓
+WRITE CODE
+  ↓
+ADD .
+  ↓
+COMMIT
+  ↓
+PUSH
+  ↓
+PULL REQUEST
+  ↓
+MAIN
+
+
+
+
 
 ROUTES:
 AUTH
@@ -24,6 +52,9 @@ PRODUCTS
 USERS
 INDIVIDUAL USER ROUTE
 INDIVIDUAL PRODUCT ROUTE
+
+
+
 
 
 
@@ -90,5 +121,14 @@ DEPLOYMENT
     and fiel from app- auth.js
 
 17. now we will crete "nxet auth"
+18. Now we will work on the Routes -- 
+            AUTH
+            PRODUCTS
+            USERS
+            INDIVIDUAL USER ROUTE
+            INDIVIDUAL PRODUCT ROUTE
+
+19. firstly create a component file admin navbar and addproduct section 
+20. 
 
 
