@@ -118,5 +118,15 @@ DEPLOYMENT
     and fiel from app- auth.js
 
 17. now we will crete "nxet auth"
+18. Now we will work on the Routes -- 
+            AUTH
+            PRODUCTS
+            USERS
+            INDIVIDUAL USER ROUTE
+            INDIVIDUAL PRODUCT ROUTE
+
+19. firstly create a component file admin navbar and addproduct section 
+20. 
+
 
 
