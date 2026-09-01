@@ -3,7 +3,7 @@ Next.js — Resort Booking Application  Developing a resort booking application 
 
 GIT_COMMANDS
 git clone https://github.com/USERNAME/REPO.git
-git mv oldfile.jsx newfile.jsx
+ren resortbookingapp14 resortbookingapp14old3
 cd REPO
 git status
 
@@ -52,6 +52,9 @@ PRODUCTS
 USERS
 INDIVIDUAL USER ROUTE
 INDIVIDUAL PRODUCT ROUTE
+
+
+
 
 
 
@@ -127,6 +130,5 @@ DEPLOYMENT
 
 19. firstly create a component file admin navbar and addproduct section 
 20. 
-
 
 
