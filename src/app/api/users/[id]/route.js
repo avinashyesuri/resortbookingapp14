@@ -3,7 +3,7 @@ import {NextResponse} from 'next/server'
 import UserModel from "@/app/utils/models/Users";
 
 export async function GET(request, {params}){
-
+//here we call req and parameters aswell 
     await DBConnection()
     const {id} = params
     console.log("dynamic id:", id)

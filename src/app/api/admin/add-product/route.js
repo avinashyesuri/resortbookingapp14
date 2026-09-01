@@ -9,8 +9,6 @@ export async function GET(){
     const records = await ProductModel.find({})
     return NextResponse.json({message: "Get request received, API SUUCESSFULLY returned "},{data:records, status:200})
     
-    
-
 }
 
 export async function POST(request){
