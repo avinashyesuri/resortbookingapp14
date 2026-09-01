@@ -18,32 +18,32 @@ const AddProductForm = () => {
         const recordDetails = {title, price, offer, amen, desc, image}
         console.log(recordDetails)
 
-    //       const data = new FormData()
-    //       data.append('title', title);
-    //       data.append('price', price);
-    //       data.append('offer', offer);
-    //       data.append('desc', desc);
-    //       data.append('amen', amen);
-    //       data.append('image', image);
+          const data = new FormData()
+          data.append('title', title);
+          data.append('price', price);
+          data.append('offer', offer);
+          data.append('desc', desc);
+          data.append('amen', amen);
+          data.append('image', image);
       
-    //       try {
-    //           const response = await fetch(`https://next-resort-project.vercel.app/api/admin/add-product`,{
-    //             method:'POST',
-    //             body:data
-    //           })   
-    //           const result = await response.json()
-    //           if(result.success){
-    //             alert("Record Added Successfully")
-    //             setTitle("")
-    //             setPrice("")
-    //             setOffer("")
-    //             setDesc("")
-    //             setAmen("")
-    //             setImage("")
-    //           }
-    //       } catch (error) {
-    //           console.log(error)
-    //       }
+          try {
+              const response = await fetch(`https://next-resort-project.vercel.app/api/admin/add-product`,{
+                method:'POST',
+                body:data
+              })   
+              const result = await response.json()
+              if(result.success){
+                alert("Record Added Successfully")
+                setTitle("")
+                setPrice("")
+                setOffer("")
+                setDesc("")
+                setAmen("")
+                setImage("")
+              }
+          } catch (error) {
+              console.log(error)
+          }
 
 
     }
