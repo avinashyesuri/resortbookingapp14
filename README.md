@@ -1,24 +1,28 @@
 # Resort_booking_application
 Next.js — Resort Booking Application  Developing a resort booking application using Next.js, focused on creating a seamless user experience for discovering resorts, exploring rooms and amenities, checking availability, and making bookings. Working with reusable React components, dynamic routing, API integration, responsive UI.
 
-GIT_COMMANDS
-git clone https://github.com/USERNAME/REPO.git
-ren resortbookingapp14 resortbookingapp14old3
+git clone URL
 cd REPO
-git status
+
+git branch
+git branch -a
 
 git checkout main
-git pull
-git checkout -b MY_BRANCH
+git pull origin main
+
+git checkout -b OFLAPT_WORK
+# OR
+git switch OFLAPT_WORK
+
 git status
 git add .
-git commit -m "Add user registration"
-git push -u origin OFFICE_WORK
+git commit -m "message"
+git push -u origin OFLAPT_WORK
 
 git checkout main
-git pull
-git checkout -b PERSONAL_WORK
-git push -u origin PERSONAL_WORK
+git pull origin main
+git merge OFLAPT_WORK
+git push origin main
 
 
 
