@@ -26,6 +26,7 @@
 //         <>
 //         <div style={{textTransform:'uppercase'}}>
 //           <UserNavigation userName = {userName}/>
+//            <calenderComponent/>
 //            welcome resort booking section
 //         </div>
 //         </>
@@ -44,6 +45,7 @@
 
 import React from 'react'
 import UserNavigation from './component/userNavigation'
+import CalenderComponent from './component/CalenderComponent'
 
 
 const HomePage = async() => {
@@ -53,7 +55,11 @@ const HomePage = async() => {
 
     <div style={{textTransform:'uppercase'}}>
       <UserNavigation/>
-      welcome resort booking section
+      <CalenderComponent/>
+      <div>
+        <h1>  welcome resort booking section</h1>
+      </div>
+    
     </div>
   )
 }
