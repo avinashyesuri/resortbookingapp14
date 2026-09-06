@@ -7,7 +7,7 @@ import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 
 
-const CalenderComponent = () => { 
+const CalenderComponent = (onDatesSelect) => { 
     
     const [showCalender, setshowCalender]= useState(false)
     const [Daterange, setDaterange] = useState([
@@ -30,6 +30,12 @@ const CalenderComponent = () => {
       console.log("selected dates:", bookingDates)
       setshowCalender(false)
 //till hjere we are able to slect the dates and display on the screen by selecting fromthe  calender 
+      if(onDatesSelect ){
+        onDatesSelect(bookingDates)
+      }
+
+
+
     }
 
     const currentDate =new Date().toDateString()
