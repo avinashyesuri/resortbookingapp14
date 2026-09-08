@@ -1,12 +1,14 @@
-import RegisterForm from '@/app/component/registerform'
+
+
+import RegisterForm from '@/app/components/RegisterForm'
 import React from 'react'
 
-const userRegister = () => {
+const UserRegister = () => {
   return (
     <div>
-        <RegisterForm/>
+        <RegisterForm />
     </div>
   )
 }
 
-export default userRegister
+export default UserRegister

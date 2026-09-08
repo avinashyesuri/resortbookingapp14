@@ -1,24 +1,32 @@
+
+
 "use server"
 
-import { signIn } from 'next-auth/react'
-import DBConnection from '../utils/config/db'
-import UserModel from '../utils/models/Users'
-// export const registerAction = 
+import { signIn } from "../auth"
+import DBConnection from "../utils/config/db"
 
-
-export async function loginAction(userLoginData){
+export async function loginAction(loginDetails){
     await DBConnection()
-    console.log("Login details:" , userLoginData)
 
+    console.log("sample login", loginDetails)
 
-    try{
-        const response = await signIn("credentials",{
-            email:userLoginData.email,
-            password:userLoginData.password,
+    try {
+        const response = await signIn('credentials',{
+            email:loginDetails.email,
+            password: loginDetails.password,
             redirect:false
         })
-         return  {success:true, mesaaage:"user registerd success"}
-    }catch(error){
- console.log("error")
+        if(!response || response.error){
+            console.log("login failed", response?.error)
+            throw new Error("login falied, Please Register")
+        }
+        return {success:true}
+    } catch (error) {
+        if (error.code === "An error occurred in the Server Components render. The specific message is omitted in production builds to avoid leaking sensitive details. A digest property is included on this error instance which may provide additional details about the nature of the error.") {
+            return { success: false, status: 400, message: "Please Register" };
+        }
+        console.log(error);
+        return { success: false, status: 500, message: "An error occurred" };
     }
-    }
+
+}
