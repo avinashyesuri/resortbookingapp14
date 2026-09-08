@@ -1,29 +1,36 @@
+"use client";
 
-
-"use client"
-
-import Link from 'next/link';
-import React, { useState } from 'react'
-
-
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { Circles } from "react-loader-spinner";
 
 const ProductCollection = () => {
-    const [collection, setCollection] = useState("")
-    const collectionHandler =async()=>{
-        const response =await fetch(`http://localhost:3000/api/admin/add-product`)
-        const newData = await response.json()
-        console.log(newData)
-        setCollection(newData.data)
+  const [collections, setCollections] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
+  const collectionHandler = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(`https://next-resort-project.vercel.app/api/admin/add-product`)
+      const newData = await response.json();
+
+      console.log("productData:", newData);
+
+      setCollections(newData.data);
+    } catch (error) {
+      setError(response.message);
+    } finally {
+      setLoading(false);
     }
-    useEffect(()=>{
-        collectionHandler()
-    },[])
+  };
 
-
+  useEffect(() => {
+    collectionHandler();
+  }, []);
 
   return (
-   <div className="productSection">
+    <div className="productSection">
       <h1 align="center">Select your Stay</h1>
       {collections ? (
         collections.map((item) => {
@@ -49,10 +56,7 @@ const ProductCollection = () => {
                   </div>
                 </div>
                 <div className="right">
-                  {/* <Link href={`/api/admin/product/${item._id}`}>
-                    <button className="detail">Details </button>
-                  </Link> */}
-                      <Link href={`/detail/${item._id}`}>
+                  <Link href={`/detail/${item._id}`}>
                     <button className="detail">Details </button>
                   </Link>
                 </div>
@@ -84,5 +88,4 @@ const ProductCollection = () => {
   );
 };
 
-
-export default ProductCollection
+export default ProductCollection;

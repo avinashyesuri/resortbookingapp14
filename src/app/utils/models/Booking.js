@@ -1,30 +1,38 @@
-const {default:Mongoose, default: mongoose } = require("mongoose");
-const bookingSchema = new Mongoose.Schema({
-    startdate:{
-        type:String,
-        required:true 
-    },
-    endtdate:{
-        type:String,
-        required:true 
-    },
+const { default: mongoose } = require("mongoose");
 
-    price :{
+
+const bookingSchema = new mongoose.Schema({
+    startDate:{
         type:String,
-        required:true 
+        required:true
     },
-    offer :{
+    endDate:{
         type:String,
+        required:true
     },
-        image:{
+    productName:{
         type:String,
-        required:true 
+        required:true
+    }, 
+    price:{
+        type:String,
+        required:true
+    },
+    offer:{
+        type:String,
+     
+    },
+    image:{
+        type:String,
+        required:true
     },
     user:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:"Users"
+        ref: 'User'
     }
+
 })
 
-const BookingModel = mongoose.models.Booking || mongoose.model("Booking", bookingSchema)
+const BookingModel = mongoose.models.booking || mongoose.model('booking', bookingSchema)
+
 export default BookingModel

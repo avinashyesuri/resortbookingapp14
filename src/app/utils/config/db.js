@@ -27,16 +27,17 @@
 
 // export default DBConnection;
 
-import mongoose from "mongoose";
+const { default: mongoose } = require("mongoose");
 
-const DBConnection = async () => {
+
+const DBConnection = async()=>{
     try {
         await mongoose.connect(process.env.MONGO_URI);
-        console.log("Database connected hurrah");
+        console.log("Database connected")
     } catch (error) {
-        console.error("Database connection failed:", error);
-        throw error;
+        console.log(error)
     }
-};
 
-export default DBConnection;
+}
+
+export default DBConnection

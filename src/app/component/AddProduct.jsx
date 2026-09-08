@@ -1,10 +1,11 @@
 
+
 "use client"
 
 import React, { useState } from 'react'
 import admin from './components.module.css'
 
-const AddProductForm = () => {
+const AddProduct = () => {
     const [title, setTitle] = useState("");
     const [price, setPrice]= useState("");
     const [offer, setOffer] = useState("");
@@ -90,4 +91,4 @@ const AddProductForm = () => {
   )
 }
 
-export default AddProductForm
+export default AddProduct
