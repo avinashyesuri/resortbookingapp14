@@ -3,22 +3,19 @@ Next.js — Resort Booking Application  Developing a resort booking application 
 
 git clone URL
 cd REPO
-
 git branch
 git branch -a
-
 git checkout main
 git pull origin main
-
 git checkout -b OFLAPT_WORK
-# OR
-git switch OFLAPT_WORK
 
+# OR
+
+git switch OFLAPT_WORK
 git status
 git add .
 git commit -m "message"
 git push -u origin OFLAPT_WORK
-
 git checkout main
 git pull origin main
 git merge OFLAPT_WORK
